@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { AuthContext } from "../helpers/AuthContext";
 import Home from "../pages/Home";
 import CreatePost from "../pages/CreatePost";
@@ -47,7 +47,7 @@ function HomePage() {
     <div className="w-full mx-auto">
       <AuthContext.Provider value={{ authState, setAuthState }}>
         <Router>
-          <div className="p-4 mb-4 flex justify-between items-center bg-blue-300">
+          <div className="p-4 mb-1 flex justify-between items-center bg-blue-300">
             {!authState.status ? (
               <div className="flex justify-end px-4">
                 <Link
